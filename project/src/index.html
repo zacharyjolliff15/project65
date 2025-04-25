@@ -8,9 +8,11 @@
 </head>
 <body>
     <h1 id="Welcome">Red Light Green Light</h1>
-    <img src="/project/src/images/greenlight.jpg" id="greenlight">
-    <button onclick="document.getElementById('greenlight').src='/project/src/images/greenlight.jpg'" class="onOff on">Press for Go</button>
-    <button onclick="document.getElementById('greenlight').src='/project/src/images/redlight.jpg'" class="onOff off">Press for Go</button>
+    <img src="/project/src/images/greenlight.jpg" id="light">
+    <button onclick="document.getElementById('light').src='/project/src/images/greenlight.jpg'" class="onOff on">Press for Go</button>
+    <button onclick="document.getElementById('light').src='/project/src/images/redlight.jpg'" class="onOff off">Press for Off</button>
+    <button onclick="document.getElementById('light').style.display='none'" class="onOff off">Disappear button</button>
+    <button onclick="document.getElementById('light').style.display='block'" class="onOff off">Reappear button</button>
     <script src="scripts/script.js"></script>
 </body>
 </html>

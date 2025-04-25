@@ -32,12 +32,8 @@ footer {
     width: 100%;
 }
 
-#greenlight{
-    width: 150px;
-}
-
-#redlight{
-    width: 150px;
+#light{
+    width: 245px;
 }
 
 .onOff{
