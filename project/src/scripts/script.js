@@ -47,16 +47,32 @@ function clickInfo(){
     console.log(light["size"])
 }
 
-let nums = [2,5,5,11]
-let target = 10
-let twoSum = function(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i+1; j < nums.length; j++) {
-            if (nums[i] + nums[j] == target){
-                return console.log([i,j]);            }
-        }
-    }
-};
+// function Person(first, last) {
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.fullName = function() {
+//       return this.firstName + " " + this.lastName;
+//     };
+//   }
+  
+//   const person1 = new Person("Bob", "Johnson");
+//   const person2 = new Person("Charlie", "Brown");
+  
+//   console.log(person1.fullName()); // Output: Bob Johnson
+//   console.log(person2.fullName()); // Output: Charlie Brown
 
-twoSum(nums,target);
+  
+const person = {
+    firstName: "Alice",
+    lastName: "Smith",
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    },
+    greet: function() {
+      console.log(`Hello, my name is ${this.fullName()}.`);
+    }
+  };
+  
+  console.log(person.fullName()); // Output: Alice Smith
+  person.greet(); // Output: Hello, my name is Alice Smith.
 
