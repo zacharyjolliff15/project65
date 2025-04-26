@@ -7,6 +7,12 @@ const lightImg = document.getElementById('light');
 const onButton = document.getElementById('onOff on');
 const offButton = document.getElementById('onOff off');
 
+const light = {
+    type: "General Electric",
+    cost: 6.99
+};
+light.size = "medium";
+
 function lighton() {
     greenClicks++;
     totalClicks = greenClicks + redClicks;
@@ -14,7 +20,7 @@ function lighton() {
     // alert("Light is on!")
     clickInfo()
     onButton.innerText = greenClicks % 2 === 0 ? "On" : "Press for On";
-}
+};
 
 function lightoff() {
     redClicks++;
@@ -23,19 +29,21 @@ function lightoff() {
     // window.alert("Light is off!")
     clickInfo()
     offButton.innerText = redClicks % 2 === 0 ? "Off" : "Press for Off";
-}
+};
 
 function disappear(){
-    light.style.display='none';
-}
+    lightImg.style.display='none';
+};
 
 function reappear(){
-    light.style.display='block';
-}
-
+    lightImg.style.display='block';
+};
 
 function clickInfo(){
     console.log("total green clicks: " + greenClicks)
     console.log("total red clicks: " + redClicks)
     console.log("total clicks: " + totalClicks)
+    console.log(light.cost)
+    console.log(light["size"])
 }
+
