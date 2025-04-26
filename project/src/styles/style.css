@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+}
+.problem-statement {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.objective {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.task-item {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}

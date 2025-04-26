@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    Problem 1: The Book Class
-    Objective: Create a simple class to represent a book and instantiate objects from it.
-    
-    Task:
-    
-    Define a class named Book.
-    
-    Give the Book class three attributes: title (string), author (string), and numberOfPages (integer).
-    
-    Create a constructor for the Book class that accepts title, author, and 
-    numberOfPages as arguments and initializes the corresponding attributes of the object being created.
-    
-    Instantiate (create) at least two different Book objects using your 
-    constructor, providing different details for each book.
-    
-    (Optional) Add a method displayInfo() that prints the book's details in a readable format 
-    (e.g., "Title: [title], Author: [author], Pages: [numberOfPages]").
-     Call this method on your created objects.
+    <div class="problem-statement">
+        <h2>Problem 2: The BankAccount Class</h2>
+        <p class="objective"><strong>Objective:</strong> Create a class with attributes and methods, using a constructor for initial setup.</p>
+        <p><strong>Task:</strong></p>
+        <ul>
+            <li class="task-item">Define a class named <code>BankAccount</code>.</li>
+            <li class="task-item">Give the class attributes like <code>accountNumber</code> (string or integer), <code>accountHolderName</code> (string), and <code>balance</code> (float or decimal).</li>
+            <li class="task-item">Create a constructor that accepts the <code>accountNumber</code> and <code>accountHolderName</code> as arguments. The constructor should initialize these attributes and set the initial balance to <code>0.0</code>.</li>
+            <li class="task-item">Add two methods to the class:
+                <ul>
+                    <li class="task-item"><code>deposit(amount)</code>: Adds the specified <code>amount</code> to the <code>balance</code>. Ensure the amount is positive.</li>
+                    <li class="task-item"><code>withdraw(amount)</code>: Subtracts the specified <code>amount</code> from the <code>balance</code>. Ensure the amount is positive and that there are sufficient funds before withdrawing. Return <code>true</code> if successful, <code>false</code> otherwise.</li>
+                </ul>
+            </li>
+            <li class="task-item">Add two more methods to the class:
+                <ul>
+                    <li class="task-item"><code>getBalance()</code>: Returns the current <code>balance</code>.</li>
+                    <li class="task-item"><code>displayAccountInfo()</code>: Prints the account holder's name, account number, and current balance.</li>
+                </ul>
+            </li>
+            <li class="task-item">Instantiate a <code>BankAccount</code> object using your constructor.</li>
+            <li class="task-item">Perform a sequence of operations: deposit some money, try to withdraw a valid amount, try to withdraw an amount greater than the balance, and finally display the account information.</li>
+        </ul>
+    </div>
     <script src="scripts/script.js"></script>
 </body>
 </html>
