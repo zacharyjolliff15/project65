@@ -50,35 +50,30 @@ function clickInfo(){
 
 
 //Palindrom problem, first solve as string
-x = 333;
+x = 0;
 var isPalindrome = function(x) {
     const input = x.toString();
     if (input.length <= 1){
         return true;
     }
 
-    // for (let i = 0; i < input.length / 2; i++){
-    //     let part = input.slice(1,input.length - i)
-    //     console.log("🚀 ~ isPalindrome ~ part:", part)
-    // }
-
     part1even = input.slice(0,input.length / 2)
-    console.log("🚀 ~ isPalindrome ~ part1even:", part1even)
     part2even = input.slice(input.length / 2 , input.length)
     part2Evenreversed = part2even.split("").reverse().join("")
-    console.log("🚀 ~ isPalindrome ~ part2Evenreversed:", part2Evenreversed)
 
     if (part1even == part2Evenreversed){
-        console.log("🚀 ~ isPalindrome ~ true:", true)
         return true
     }
    
-    part2odd = 
+    part1odd = input.slice(0,(input.length + 1) / 2)
+    part2odd = input.slice(input.length / 2, input.length)
+    part2Oddreversed = part2odd.split("").reverse().join("")
 
+    if (part1odd == part2Oddreversed){
+        return true
+    }
 
     
-    
-
     
 };
 isPalindrome(x)
