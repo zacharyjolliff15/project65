@@ -48,20 +48,38 @@ function clickInfo(){
 }
 
 
-//Constructer function for dog objects
-function dog(color, weight, kidFriendly) {
-    this.color = color;
-    this.weight = weight;
-    this.kidFriendly = kidFriendly;
-    this.worseThancats= true;
-    this.bark = function() {
-        console.log("Woof Woof");
-    };
-}
 
-const dog1 = new dog("red",120,false) ;
-const dog2 = { color: "brown", weight: 85, kidFriendly: true };
-const dog3 = { color: "yellow", weight: 45, kidFriendly: false, gay: false };
-const dog4 = new dog("greensih", 200, true, 234, 444, 477) //extra arguements ignored, but accesible
+//Palindrom problem, first solve as string
+x = 333;
+var isPalindrome = function(x) {
+    const input = x.toString();
+    if (input.length <= 1){
+        return true;
+    }
 
-dog1.bark();
+    // for (let i = 0; i < input.length / 2; i++){
+    //     let part = input.slice(1,input.length - i)
+    //     console.log("🚀 ~ isPalindrome ~ part:", part)
+    // }
+
+    part1even = input.slice(0,input.length / 2)
+    console.log("🚀 ~ isPalindrome ~ part1even:", part1even)
+    part2even = input.slice(input.length / 2 , input.length)
+    part2Evenreversed = part2even.split("").reverse().join("")
+    console.log("🚀 ~ isPalindrome ~ part2Evenreversed:", part2Evenreversed)
+
+    if (part1even == part2Evenreversed){
+        console.log("🚀 ~ isPalindrome ~ true:", true)
+        return true
+    }
+   
+    part2odd = 
+
+
+    
+    
+
+    
+};
+isPalindrome(x)
+
