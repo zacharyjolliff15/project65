@@ -1,20 +1,26 @@
-class Book {
-    constructor(title, author, numberOfPages){
-        this.title = title;
-        this.author = author;
-        this.numberOfPages = numberOfPages;
-        // this.displayInfo = function() {
-        //     return console.log(`Title: ${title}, Author: ${author}, Pages: ${numberOfPages}`)
-        // };  
+class BankAccount {
+    constructor (accountNumber = 0.0, accountHolderName, balance = 0.0){
+        this.accountNumber = accountNumber
+        this.accountHolderName = accountHolderName
+        this.balance = balance
     }
-    //Better to have it outside the constructor so every book can access it, but they each don't have their own copy of the function
-    displayInfo() {
-        console.log(`Title: ${this.title}, Author: ${this.author}, Pages: ${this.numberOfPages}`);
-    }
-  
 }
 
-const Bible = new Book("Bible NIV", "Jesus Christ", 777)
-const atomicHabits = new Book("Atomic Habits", "James Clear", 352)
 
-Bible.displayInfo()
+// class BankAccount {
+//     constructor (accountNumber, accountHolderName, balance = 0.0){
+//         this.accountNumber = accountNumber;
+//         this.accountHolderName = accountHolderName;
+//         this.balance = balance;
+//     }
+// }
+
+// // Example of creating a BankAccount object:
+// const account1 = new BankAccount("12345", "Alice", 100.50);
+// const account2 = new BankAccount("67890", "Bob"); // balance will be 0.0 by default
+
+// console.log(account1.accountNumber); // Output: 12345
+// console.log(account1.balance);       // Output: 100.5
+
+// console.log(account2.accountNumber); // Output: 67890
+// console.log(account2.balance);       // Output: 0
