@@ -54,6 +54,7 @@ x = 0;
 var isPalindrome = function(x) {
     const input = x.toString();
     if (input.length <= 1){
+        console.log("🚀 ~ isPalindrome ~ true:", true)
         return true;
     }
 
@@ -62,6 +63,7 @@ var isPalindrome = function(x) {
     part2Evenreversed = part2even.split("").reverse().join("")
 
     if (part1even == part2Evenreversed){
+        console.log("🚀 ~ isPalindrome ~ true:", true)
         return true
     }
    
@@ -70,11 +72,13 @@ var isPalindrome = function(x) {
     part2Oddreversed = part2odd.split("").reverse().join("")
 
     if (part1odd == part2Oddreversed){
+        console.log("🚀 ~ isPalindrome ~ true:", true)
         return true
     }
 
-    
-    
+    else{
+        return false
+    }
 };
 isPalindrome(x)
 
