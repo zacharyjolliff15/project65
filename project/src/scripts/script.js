@@ -85,55 +85,38 @@ function clickInfo(){
 
 //  3)roman numerals
 
+
+//If the values from left to right are in perfect order, we can just add them up as they are
+//have two loops, the second one is off by i + 1 and checks to see if the value to right is larger then the left, subtract from total
+
 /**
  * @param {string} s
  * @return {number}
  */
 var romanToInt = function(s) {
-    for (let i = 0; i < s.length; i++){
-        switch(s[i]){
-            case "I":
-                s[i] = "1"; 
-            break
-
-            case "V":
-                s[i] = "5"; 
-            break
-
-            case "X":
-                s[i] = "10"; 
-            break
-
-            case "L":
-                s[i] = "50"; 
-            break
-
-            case "C":
-                s[i] = "100"; 
-            break
-
-            case "D":
-                s[i] = "500"; 
-            break
-
-            case "M":
-                s[i] = "1000"; 
-            break
+    const romanToIntObject = {
+        'I': 1, 'V': 5, 'X': 10, 'L': 50,
+        'C': 100, 'D': 500, 'M': 1000
+    };
+    let result = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (romanToIntObject[s[i]] < romanToIntObject[s[i + 1]]) {
+            result -= romanToIntObject[s[i]];
+        } else {
+            result += romanToIntObject[s[i]];
         }
-
     }
-    let concatStr = "";
-    for (let j = 0; j < s.length; j++){
-        console.log(s)
-        const currentValue = s[j];
-        concatStr += currentValue;
-    }
-
-    console.log("🚀 ~ romanToInt ~ concatStr:", s)
-
-
+    console.log("🚀 ~ romanToInt ~ result:", result)
+    return result;
 };
-
-
-s = "LVIII"
+s = "XLIX"
 romanToInt(s)
+
+/*
+i	s[i]	s[i+1]	value(s[i])	value(s[i+1])	value(s[i])<value(s[i+1])?	result change	running total
+0	X	L	10	50	10 < 50 → true	–10	–10
+1	L	I	50	1	50 < 1 → false	+50	40
+2	I	X	1	10	1 < 10 → true	–1	39
+3	X	undefined	10	undefined	10 < undefined → false	+10	49
+
+*/
