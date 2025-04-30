@@ -1,19 +1,13 @@
-/**
- * @return {Function}
- */
-var createHelloWorld = function() {
-    return function f() {
-        return "Hello world"
+//JS closure example that is really cool
+function createMult(factor){
+    return function (number){
+        return number * factor
     }
- 
-    
-    
-}
+}  
+
+const double = createMult(2)
+const triple = createMult(3)
 
 
-const f = createHelloWorld();
- f(); // "Hello World"
- 
-
-//  Write a function createHelloWorld. It should return a new function that always returns "Hello World".
-// 
+console.log(double(5));   // Output: 10
+console.log(triple(5));   // Output: 15
