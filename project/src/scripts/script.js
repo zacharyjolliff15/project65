@@ -1,19 +1,27 @@
 /**
- * @param {number} n
- * @return {Function} counter
+ * @param {string} val
+ * @return {Object}
  */
-var createCounter = function(n) {
-    let currentCount = n;
-    return function() {
-        return currentCount++ //remeber that i++ means return i, then increment.
-        
-    };
-};
+  
+  var expect = function(val){
+    return{
+        toBe: function (expectedVal){
+            if (val === expectedVal) {
+                return true;
+              } else {
+                throw new Error("Not Equal");
+              }
+        },
+        notToBe: function (expectedVal){
+            if (val !== expectedVal) {
+                return true;
+              } else {
+                throw new Error("Equal");
+              }
+        }
+    }
+  }
 
+  console.log("Anonymous approach",expect(5).toBe(5));
 
-const counter = createCounter(10)
-console.log("🚀 ~ counter():", counter())
-console.log("🚀 ~ counter():", counter())
-
-
-
+//toBe and notToBe are anonymous objects that have anonymous methods defined in them?
