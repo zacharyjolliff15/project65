@@ -1,27 +1,19 @@
 /**
- * @param {string} val
- * @return {Object}
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
  */
-  
-  var expect = function(val){
-    return{
-        toBe: function (expectedVal){
-            if (val === expectedVal) {
-                return true;
-              } else {
-                throw new Error("Not Equal");
-              }
-        },
-        notToBe: function (expectedVal){
-            if (val !== expectedVal) {
-                return true;
-              } else {
-                throw new Error("Equal");
-              }
-        }
-    }
-  }
+var twoSum = function(nums, target) {
+    for (i = 0; i < nums.length; i++){
+      for (j = i + 1; j < nums.length; j++){
+          if (nums[i] + nums[j] == target){
+              return [i,j]
+          }
+      }
+    }  
 
-  console.log("Anonymous approach",expect(5).toBe(5));
+};
 
-//toBe and notToBe are anonymous objects that have anonymous methods defined in them?
+twoSum([2,7,11,15], 9)
+
+//12 minutes
