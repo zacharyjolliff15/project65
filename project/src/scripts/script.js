@@ -1,22 +1,29 @@
-//total hrs studied 16
-
 /**
- * @param {string} val
- * @return {Object}
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
  */
-var expect = function(val) {
-  return {
-      toBe: function(otherVal) {
-          if (val === otherVal) return true;
-          else throw new Error("Not Equal");
-      },
-      notToBe: function(otherVal) {
-          if (val !== otherVal) return true;
-          else throw new Error("Equal");
-      }
-  };
-};
+var createCounter = function(init) {
+    startVal = init
+    return {
+        increment: function (){
+            return ++init
+        },
+        decrement: function (){
+            return --init
+        },
+        reset: function (){
+            init = startVal
+            return init
+        }
+    }
+}
 
- console.log("🚀 ~  expect(5).toBe(5);:",  expect(5).toBe(null))
+  const counter = createCounter(5)
+  console.log("🚀 ~ counter.increment():", counter.increment()) 
+  console.log("🚀 ~ counter.increment():", counter.increment()) 
+  console.log("🚀 ~ counter.increment():", counter.increment()) 
+  console.log("🚀 ~ counter.reset():", counter.reset()) 
+  console.log("🚀 ~ counter.decrement():", counter.decrement()) 
 
+  
  
